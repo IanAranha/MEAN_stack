@@ -1,0 +1,54 @@
+<html>
+    <head>
+    </head>
+    <body>
+
+    <script>
+//Create a function called starString() that takes a number and returns a string of that many *.
+
+function starString(num){
+    str=''
+    while(num > 0){
+        str+='*'
+        num --
+    }
+    return str
+}
+
+//Create a function called drawStars() that takes an array of numbers and prints out *.
+
+function drawStars(arr){
+    for(let x = 0; x < arr.length; x ++){
+       console.log(starString(arr[x]))
+    }
+}
+
+//Modify the function above. Allow an array containing integers and strings to be passed to the drawStars() function. 
+//When a string is passed, instead of displaying *, display the first letter of the string according to the example below. 
+//You may use the .toLowerCase() string method for this part.
+
+function drawStars2(arr){
+    
+    for(let x = 0; x < arr.length; x ++){
+        if(arr[x].constructor === String){
+            str2=''
+            count=arr[x].length-1
+            while(count >= 0){
+                str2+=arr[x][0].toLowerCase()
+                count--
+            }
+            console.log(str2)
+        }
+        else {
+            console.log(starString(arr[x]))
+        }
+    }
+}
+
+console.log(starString(1))
+console.log(starString(10))
+drawStars([4, 6, 1, 3, 5, 7, 25])
+drawStars2([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"])
+    </script>
+    </body>
+</html>
