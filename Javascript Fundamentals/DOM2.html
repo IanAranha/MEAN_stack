@@ -1,0 +1,23 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div>
+            <ol id='fruits'>
+                <li>Banana</li>
+                <li>Orange</li>
+                <li>Grapes</li>
+            </ol>
+        </div>
+        <script>
+            //Create empty <li></li>
+            let x = document.createElement("li");
+            
+            //Add value to the new element
+            x.innerHTML='Peaches';
+            
+            //Append to the innerHTML
+            document.getElementById('fruits').appendChild(x)
+        </script>
+    </body>
+</html>
