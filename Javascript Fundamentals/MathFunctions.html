@@ -1,0 +1,98 @@
+<html>
+    <head>
+    </head>
+    <body>
+
+    <script>
+//Write a function called zero_negativity(). 
+//This function should take an array. 
+//Return true if the input array contains no negative numbers, return false if it does.
+
+    function zero_negativity(arr){
+        for(let x = 0; x < arr.length; x++){
+            if(arr[x] < 0){
+                return false
+                }
+            }
+        return true
+        }
+
+//Write a function called is_even(). 
+//This function should take a number. 
+//Return true if the input number is even, return false if the number is odd.
+
+    function isEven(num){
+        if(num % 2 == 0){
+            return true
+        }
+        return false
+    }
+
+//Write a function called how_many_even(). 
+//This function should take an array.
+//Return the total number of elements in the array that are even. You may call is_even() to solve this.
+
+    function how_many_even(arr){
+        count = 0;
+        for(let x = 0; x < arr.length; x++){
+            if(isEven(arr[x])){
+                count+=1
+            }
+        }
+        return count
+    }
+
+//Write a function called create_dummy_array(). 
+//This function should take a number n. Return an array of random numbers between 0 and 9 with the length of n.
+
+    function create_dummy_array(num){
+        arr=[]
+        while(num > 0){
+            random_num=Math.floor(Math.random() * 100)
+            arr.push(random_num)
+            num --
+        }
+        return arr
+    }
+
+//Write a function called random_choice(). 
+//This function should take an array. Return a random element of the array, based on its length. 
+//This function should never return undefined.
+
+    function random_choice(arr){
+        if(arr.length == 0){
+            return 'Array is empty'
+        } else if(arr.length == 1) {
+            return arr[0]
+        } else {
+            random_num = Math.floor(Math.random() * arr.length)
+            return arr[random_num]
+        }
+    }
+
+    console.log(zero_negativity([1,2,3,4,5,6])) // ---> true
+    console.log(zero_negativity([1,2,-3,4,5,6])) // ---> false
+    console.log(zero_negativity([1,2,3,4,5,-6])) // ---> false
+    console.log(isEven(10)) // ---> true
+    console.log(isEven(11)) // ---> false
+    console.log(isEven(33)) // ---> false
+    console.log(isEven(75)) // --->false
+    console.log(isEven(98)) // ---> true
+    console.log(how_many_even([1,3,5,7,11,15])) // ---> 0
+    console.log(how_many_even([1,3,6,7,11,12,15])) // ---> 2
+    console.log(how_many_even([2,4,6,8,10,12,14,16,18])) // ---> 9
+    console.log(how_many_even([2,4,6,8,10,12,14,16,18,101,125,111,133,150,1])) // ---> 10
+    console.log(create_dummy_array(2)) // ---> 2
+    console.log(create_dummy_array(20)) // --->20
+    console.log(create_dummy_array(2000)) // ---> Array of 2000 numbers
+    console.log(create_dummy_array(2000000)) // ---> Array of 2000000 numbers
+    console.log(random_choice([]))  // --->Array is empty
+    console.log(random_choice([2])) // ---> 2
+    console.log(random_choice([1,4,6,8,20])) // ---> Random number from array
+    console.log(random_choice(create_dummy_array(40))) //---> Random number from array 
+
+
+
+    </script>
+    </body>
+</html>
