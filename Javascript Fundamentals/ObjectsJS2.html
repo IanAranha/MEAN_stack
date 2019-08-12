@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	let students = [
+            {name: 'Remy', cohort: 'Jan'},
+            {name: 'Genevieve', cohort: 'March'},
+            {name: 'Chuck', cohort: 'Jan'},
+            {name: 'Osmund', cohort: 'June'},
+            {name: 'Nikki', cohort: 'June'},
+            {name: 'Boris', cohort: 'June'}
+        ];
+//Write a function that accepts an array of student objects, as shown below. 
+//Print all of the students' names and their cohorts.
+//Printout should look like:
+        //Name: Remy, Cohort: Jan
+        //Name: Genevieve, Cohort: March
+        //Name: Chuck, Cohort: Jan
+        //Name: Osmund, Cohort: June
+        //Name: Nikki, Cohort: June
+        //Name: Boris, Cohort: June
+    
+    
+    function printCohort(arr){
+        for(x=0; x<arr.length; x++){
+            console.log('Name: ', arr[x].name, ', Cohort: ', arr[x].cohort)
+        }
+    }
+
+    printCohort(students)
+
+</script>   
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	let users = {
+            employees: [
+                {'first_name':  'Miguel', 'last_name' : 'Jones'},
+                {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+                {'first_name' : 'Nora', 'last_name' : 'Lu'},
+                {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+            ],
+            managers: [
+               {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+               {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+            ]
+        };
+//Write a function that accepts an object of users divided into employees and managers, 
+//and display the number of characters per employee/manager's name, as shown below, 
+//and logs the information to the console.
+    
+//    EMPLOYEES
+//1 - JONES, MIGUEL - 11
+//2 - BERTSON, ERNIE - 12
+//3 - LU, NORA - 6
+//4 - BARKYOUMB, SALLY - 14
+//MANAGERS
+//1 - CHAMBERS, LILLIAN - 15
+//2 - POE, GORDON - 9
+    
+    function staffPrintOut(obj){
+        for(let employee in obj){
+            console.log(employee.toUpperCase());
+            for(let x=0; x < obj[employee].length; x++){
+                console.log(x+1+ " - " + obj[employee][x].last_name.toUpperCase()+', '+ obj[employee][x].first_name.toUpperCase()+" - "+(obj[employee][x].first_name.length + obj[employee][x].last_name.length))
+            }
+        }
+    }
+
+staffPrintOut(users)
+    
+    
+</script>   
+</html>
