@@ -11,20 +11,21 @@
         </div>
 
     <script>
-        var button = document.getElementById('getGit')
-        button.addEventListener('click', displayName)
-
-        function displayName(){
-            $.get('https://api.github.com/users/IanAranha', getData)
-            
-            function getData(data){
-                console.log(data)
-                document.getElementById('showName').innerHTML=data.login
-                document.getElementById('showBio').innerHTML=data.bio
-                document.getElementById('showURL').href=data.html_url
-                document.getElementById('showURL').innerHTML=data.html_url
+        $(document).ready(
+            function(){
+                $('button').click(function(){
+                    $.get('https://api.github.com/users/IanAranha', displayName);
+                })
+                function displayName(data){
+                    if(data.name){
+                        document.getElementById('showName').innerHTML=data.login
+                        document.getElementById('showBio').innerHTML=data.bio
+                        document.getElementById('showURL').href=data.html_url
+                        document.getElementById('showURL').innerHTML=data.html_url
+                    }
+                }
             }
-        }
+        )
     </script>
     </body>
 </html>
