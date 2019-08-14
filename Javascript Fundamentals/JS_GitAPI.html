@@ -1,0 +1,30 @@
+<html>
+    <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <button id='getGit'>GET GIT</button>
+            <p id='showName'></p>
+            <p id='showBio'></p>
+            <a id='showURL' href="" target="_blank"></a>
+        </div>
+
+    <script>
+        var button = document.getElementById('getGit')
+        button.addEventListener('click', displayName)
+
+        function displayName(){
+            $.get('https://api.github.com/users/IanAranha', getData)
+            
+            function getData(data){
+                console.log(data)
+                document.getElementById('showName').innerHTML=data.login
+                document.getElementById('showBio').innerHTML=data.bio
+                document.getElementById('showURL').href=data.html_url
+                document.getElementById('showURL').innerHTML=data.html_url
+            }
+        }
+    </script>
+    </body>
+</html>
