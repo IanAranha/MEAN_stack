@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
     <title>Document</title>
 </head>
 <body>
-    <div id=wrapper>
+    <div id='wrapper'>
         <h2>COUNTER</h2>
         <p>This page has been loaded :  <%= counter%> times!</p>
         
         <h4>Clink to reload page and increment counter:</h4>
         <form action='/add' method='POST'>
-            <input type="submit" value='ADD ONE'>
+            <input class='button' type="submit" value='ADD ONE'>
         </form>
         <form action='/addtwo' method='POST'>
-            <input type="submit"  value='ADD TWO'>
+            <input class='button button2' type="submit"  value='ADD TWO'>
         </form>
         <form action='/clear' method='POST'>
-            <input type="submit"  value='RESET'>
+            <input class='button button3' type="submit"  value='RESET'>
         </form>
     </div>
 </body>
