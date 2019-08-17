@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id=wrapper>
+        <h2>COUNTER</h2>
+        <p>This page has been loaded :  <%= counter%> times!</p>
+        
+        <h4>Clink to reload page and increment counter:</h4>
+        <form action='/add' method='POST'>
+            <input type="submit" value='ADD ONE'>
+        </form>
+        <form action='/addtwo' method='POST'>
+            <input type="submit"  value='ADD TWO'>
+        </form>
+        <form action='/clear' method='POST'>
+            <input type="submit"  value='RESET'>
+        </form>
+    </div>
+</body>
+</html>

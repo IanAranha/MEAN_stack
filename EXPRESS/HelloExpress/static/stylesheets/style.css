@@ -1,0 +1,8 @@
+#wrapper{
+    border: 3px solid black;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    text-align: center;
+    padding: 70px 0;
+}
