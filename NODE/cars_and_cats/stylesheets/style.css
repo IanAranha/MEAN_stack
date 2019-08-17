@@ -1,0 +1,12 @@
+#wrapper{
+    border: 2px solid black;
+    margin: auto;
+    padding: 30px;
+    width: 70%
+}
+
+.pictures{
+    border: 4px solid blue;
+    align-content: center;
+    margin: 10px;
+}
