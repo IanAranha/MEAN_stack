@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <h2>Welcome to the Great Number Guessing Game</h2>
+            <h4>I am thinking of a number between 1 and 100</h4>
+            <h4>Take a guess!</h4>
+            <div class="<%= status %>">
+                <% if(status == 'Correct') { %>
+                    <p>You got it</p>
+                    <form action=/reset method='POST'>
+                        <button>RESET</button>
+                    </form>
+                <% } else { %>
+                    <% if( status != 'None'){ %>
+                        <p><%= status %></p>
+                    <% } %>
+                <% } %>
+            </div>
+            <br>
+            <form action='/guess' method='POST'>
+                <input id=number type="number" name='number'><br>
+                <br>
+                <input id='button' type="submit" value="Take a Guess!">
+            </form>
+        </div>
+    </body>
+</html>
