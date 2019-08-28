@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quotes</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+</head>
+<body>
+    <div class=wrapper>
+        <h1>QUOTES!</h1>
+        <h3>Check out all the awesome quotes:</h3>
+        <% for ( var quote of all_quotes) {%>
+            '<%= quote.quote %>'<br>
+                        -<%= quote.user %> at <%= moment(quote.createdAt).format('HH:mm MMMM Do YYYY') %><br>
+        <% } %>
+        <a href='/'>Back to Home Page</a>
+    </div>
+</body>
+</html>
