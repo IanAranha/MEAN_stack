@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mongoose</title>
+</head>
+<body>
+    <form action="/users" method='post'>
+        <label for='name'>Name: </label>
+        <input name='name' type="text">
+        <br>
+        <label for='age'>Age:</label>
+        <input name='age' type="number">
+        <br>
+        <input type="submit" value='SUBMIT'>
+    </form>
+    <table>
+        <head>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+        </head>
+        <tbody>
+            <% for (var user of users) { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.age %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <%= users.id%>
+    <%= users.name%>
+    <%= users.age%>
+</body>
+</html>
