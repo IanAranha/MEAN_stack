@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EDIT MONGOOSE</title>
+</head>
+<body>
+    <a href='/'>GO BACK</a> | <a href='/delete/<%= mongoose._id %>'>DELETE</a>
+    <h1>UPDATE MONGOOSE</h1>
+    <form action='/update/<%= mongoose._id %>' method='POST'>
+        <label for='name'>Name: </label>
+        <input name='name' type='text' value=<%= mongoose.name%>>
+        <label for='weight'>Weight: </label>
+        <input name='weight' type='number' value=<%= mongoose.weight%>>
+        <label for='gender'>Gender: </label>
+        <select name='gender'>
+            <option value='Male'>Male</option>
+            <option value='Female'>Female</option>
+        </select>
+        <label for='color'>Color: </label>
+        <input name='color' type='text' value=<%= mongoose.color%>>
+        <br>
+        <input type='submit' value='UPDATE'>
+    </form>
+</body>
+</html>

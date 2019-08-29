@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MONGOOSE</title>
+</head>
+<body>
+    <h1>MONGOOSE</h1>
+    <a href='/new'>Create a new mongoose!</a>
+    <table>
+            <head>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Gender</th>
+                <th>Color</th>
+                <th>Action</th>
+            </head>
+            <tbody>
+                <% for (var m of all_mongooses) { %>
+                    <tr>
+                        <td><%= m.name %></td>
+                        <td><%= m.weight %></td>
+                        <td><%= m.gender %></td>
+                        <td><%= m.color %></td>
+                        <td> <a href='/show/<%= m._id %>'>SHOW</a> | <a href='/edit/<%= m._id %>'>EDIT</a> | <a href='/delete/<%= m._id %>'>DELETE</a></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+</body>
+</html>

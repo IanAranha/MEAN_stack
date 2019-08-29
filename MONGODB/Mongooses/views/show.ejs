@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SHOW MONGOOSE</title>
+</head>
+<body>
+    <a href='/'>GO BACK</a> | <a href='/edit/<%= mongoose._id %>'>EDIT</a> | <a href='/delete/<%= mongoose._id %>'>DELETE</a>
+    <h2>SHOW MONGOOSE!!!</h2>
+    <%=mongoose.name %><br>
+    <%=mongoose.weight %><br>
+    <%=mongoose.gender %><br>
+    <%=mongoose.color %>
+</body>
+</html>

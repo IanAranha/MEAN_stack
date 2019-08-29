@@ -183,3 +183,8 @@ codereview.rc
 # Python venvs and virtualenvs
 python3-venv
 python2-venv
+
+
+/node_modules
+
+node_modules/
